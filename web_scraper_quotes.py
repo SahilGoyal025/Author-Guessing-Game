@@ -21,7 +21,7 @@ def quotes_scraper():
 		next_btn=soup.find(class_='next')
 		if next_btn:
 			next_btn=next_btn.find('a')['href']
-		sleep(1)
+		sleep(1)		# program execution is delayed for 1 sec so that the site's server will not get overloaded with requests.
 	return quotes
 def writing_csv(quotes):
 	with open('csv_quotes.csv','w',encoding='utf-8') as f:
